@@ -1,15 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 
 import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native'
-import AuthNavigator from './src/navigation/AuthNavigator/AuthNavigator'
+import AuthStackNavigator from './src/navigation/AuthStackNavigator/AuthStackNavigator'
+import AppStyle from './src/styles/GlobalStyle';
 
 function App() {
   return (
-    <NavigationContainer>
-      <AuthNavigator/>
-    </NavigationContainer>
+    <SafeAreaView style={AppStyle.AppStyles.safeArea}>
+      <NavigationContainer>
+        <AuthStackNavigator/>
+      </NavigationContainer>
+    </SafeAreaView>
   );
 }
 

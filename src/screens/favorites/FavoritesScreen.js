@@ -2,10 +2,10 @@ import React from 'react';
 import { View, Text, Button } from 'react-native';
 import AppStyle from '../../styles/GlobalStyle'
 
-function CategoriesScreen ({ navigation }) {
+function FavoritesScreen ({ navigation }) {
   return (
     <View>
-      <Text>Home CategoriesScreen Hehe</Text>
+      <Text>Home FavoritesScreen Hehe</Text>
       <Button
         title="Go to FoodDetail"
         onPress={ () => navigation.navigate("FoodDetail")}
@@ -14,4 +14,4 @@ function CategoriesScreen ({ navigation }) {
   );
 };
 
-export default CategoriesScreen;
+export default FavoritesScreen;

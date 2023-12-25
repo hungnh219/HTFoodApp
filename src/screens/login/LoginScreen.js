@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, Button } from 'react-native';
+
 import AppStyle from '../../styles/GlobalStyle'
 
 function LoginScreen({ navigation }) {
@@ -8,7 +9,11 @@ function LoginScreen({ navigation }) {
       <Text>Login Screen</Text>
       <Button
         title="Go to HomeScreen"
-        onPress={ () => navigation.navigate('Home')}
+        onPress={ () => navigation.navigate("Main")}
+      />
+      <Button
+        title="Sign up"
+        onPress={ () => navigation.navigate("SignUp")}
       />
     </View>
   );
