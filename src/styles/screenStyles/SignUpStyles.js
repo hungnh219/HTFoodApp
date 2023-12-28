@@ -1,17 +1,13 @@
 import { StyleSheet } from 'react-native'
 
-const LoginStyles = StyleSheet.create({
+const SignUpStyles = StyleSheet.create({
     container: {
         flex: 1,   
     },
     image: {
         flex: 1,        
     },
-    backBtn: {
-        marginTop: 20,
-        marginLeft: 20,
-    },
-    loginTitle: {
+    signUpTitle: {
         marginLeft: 25,
         marginTop: 40,
         marginBottom: 20,
@@ -38,13 +34,6 @@ const LoginStyles = StyleSheet.create({
         fontSize: 18,
         width: '90%',        
     },
-    forgotContainer: {
-        alignItems: 'center',
-        marginVertical: 20,
-    },
-    forgotPassword: {
-        fontSize: 16,
-    },
     orangeText: {
         color: '#FE724C',
     },
@@ -52,11 +41,12 @@ const LoginStyles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',  
     },
-    loginBtn: {
+    signUpBtn: {
+        marginVertical: 25,
         backgroundColor: '#FE724C',
         borderRadius: 27,        
     }, 
-    loginBtnText: {
+    signUpBtnText: {
         paddingVertical: 15,
         paddingHorizontal: 100,  
         color: '#fff',
@@ -64,12 +54,13 @@ const LoginStyles = StyleSheet.create({
         fontWeight: 'bold',
     },
     signUp: {
-        marginVertical: 25,
+        // marginVertical: 25,
     },
     signUpText: {
         fontSize: 16,
+        marginBottom: 20,
     },
-    otherSignIn: {
+    otherSignUp: {
         marginVertical: 20,
         fontSize: 16,
     },
@@ -92,4 +83,4 @@ const LoginStyles = StyleSheet.create({
     },
 });
 
-export default LoginStyles;
+export default SignUpStyles;
