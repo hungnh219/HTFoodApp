@@ -13,15 +13,17 @@ import MyOrdersStackNavigator from '../MyOrdersStackNavigator/MyOrdersStackNavig
 
 const Tab = createBottomTabNavigator();
 
-function MainTabNavigator () {
+function MainTabNavigator ({ route }) {
   return (
-    <Tab.Navigator initialRouteName='Home'>
+    <Tab.Navigator initialRouteName='HomeStackNavigator'>
       <Tab.Screen
         name="HomeStackNavigator"
         component={HomeStackNavigator}
         options={{
           headerShown: false,
+          tabBarStyle: { display: "flex" },
         }}
+
         />
       <Tab.Screen
         name="Category"

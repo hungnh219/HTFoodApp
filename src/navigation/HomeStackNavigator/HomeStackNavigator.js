@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 
 import { createStackNavigator } from '@react-navigation/stack';
+import {useFocusEffect} from '@react-navigation/native';
 
 import LoginScreen from '../../screens/login/LoginScreen'
 import HomeScreen from '../../screens/home/HomeScreen'
@@ -11,7 +12,7 @@ import EditProfileScreen from '../../screens/editProfile/EditProfileScreen';
 
 const Stack = createStackNavigator();
 
-function HomeStackNavigator() {
+function HomeStackNavigator({ navigation }) {
   return (
     <Stack.Navigator initialRouteName="Home">
       <Stack.Screen
@@ -39,14 +40,16 @@ function HomeStackNavigator() {
         name="Profile"
         component={ProfileScreen}
         options={{
-            headerShown: false,
+          headerShown: true,
+          tabBarVisible: false,
         }}
         />
       <Stack.Screen
         name="EditProfile"
         component={EditProfileScreen}
         options={{
-            headerShown: false,
+          headerShown: true,
+          tabBarVisible: false,
         }}
         />
     </Stack.Navigator>
