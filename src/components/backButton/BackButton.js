@@ -12,6 +12,7 @@ function BackButton() {
 
 const styles = StyleSheet.create({
   button: {
+
     width: 40,
     height: 40,
     borderRadius: 25,

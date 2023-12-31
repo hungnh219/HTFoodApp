@@ -29,7 +29,7 @@ function MyOrdersStackNavigator () {
         name="Rating"
         component={RatingScreen}
         options={{
-            headerShown: true,
+            headerShown: false,
         }}
         />
     </Stack.Navigator>

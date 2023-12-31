@@ -15,6 +15,8 @@ import CategoriesStyles from './screenStyles/CategoriesStyles'
 import CategoryItemStyles from './componentStyles/CategoryItemStyles'
 import CartItemStyles from './componentStyles/CartItemStyles'
 import HistoryItemStyles from './componentStyles/HistoryItemStyles'
+import UpcomingItemStyles from './componentStyles/UpcomingItemStyles'
+import UpcomingStyles from './screenStyles/UpcomingStyles'
 
 const AppStyle = {
     HomeStyles,
@@ -34,7 +36,8 @@ const AppStyle = {
     CategoryItemStyles,
     CartItemStyles,
     HistoryItemStyles,
-    
+    UpcomingItemStyles,
+    UpcomingStyles,
 }
 
 export default AppStyle;
