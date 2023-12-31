@@ -10,6 +10,11 @@ import CustomTextBoxStyles from './componentStyles/CustomTextBoxStyles'
 import CustomTextInputStyles from './componentStyles/CustomTextInputStyles'
 import SignUpStyles from './screenStyles/SignUpStyles'
 import WelcomeStyles from './screenStyles/WelcomeStyles'
+import FoodItems_PortraitStyles from './componentStyles/FoodItems_PortraitStyles'
+import CategoriesStyles from './screenStyles/CategoriesStyles'
+import CategoryItemStyles from './componentStyles/CategoryItemStyles'
+import CartItemStyles from './componentStyles/CartItemStyles'
+import HistoryItemStyles from './componentStyles/HistoryItemStyles'
 
 const AppStyle = {
     HomeStyles,
@@ -24,6 +29,12 @@ const AppStyle = {
     CustomTextInputStyles,
     ReviewsStyles,
     WelcomeStyles,
+    FoodItems_PortraitStyles,
+    CategoriesStyles,
+    CategoryItemStyles,
+    CartItemStyles,
+    HistoryItemStyles,
+    
 }
 
 export default AppStyle;

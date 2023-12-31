@@ -1,12 +1,16 @@
-import React from 'react';
-import { View, Text } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, Image } from 'react-native';
+import CartItem from '../../components/cartItem/CartItem';
 
 import AppStyle from '../../styles/GlobalStyle'
 
 function CartScreen () {
+  const [cartItems, setCartItems] = useState([]);
+
   return (
     <View>
-      <Text>Home CartScreen Hehe</Text>
+      <Text>Cart Screen</Text>
+      <CartItem />
     </View>
   );
 };
