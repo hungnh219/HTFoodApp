@@ -1,24 +1,44 @@
 // src/components/FoodItem.js
-import React from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import React, {useState} from 'react';
+import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+
 import AppStyle from '../../styles/GlobalStyle'
 
+
+
 function FoodItems_Portrait({item}) {
-        const foodData = {
-                image: require('../../../assets/img/food.png'),
-                price: 9.50,
-                name: 'Ground Beef Tacos',
-                description: 'Brown the beef better. Lean ground beef – I like to use 85% lean angus. Garlic – use fresh  chopped. Spices – chili powder, cumin, onion powder.',
-                rating: {
-                    count: 50,
-                    average: 4.5,
-                },
-            };
+  const [quantity, setQuantity] = useState(1);
+
+  const handleDecrease = () => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    }
+  };
+  
         return(
           <View style={AppStyle.FoodItems_PortraitStyles.container}>
-          <Image source={foodData.image} style={AppStyle.FoodItems_PortraitStyles.image} />
-          <Text style={AppStyle.FoodItems_PortraitStyles.name}>{foodData.name}</Text>
-          <Text style={AppStyle.FoodItems_PortraitStyles.price}>{foodData.price} $</Text>
+          
+          <View style={AppStyle.FoodItems_PortraitStyles.foodImageContainer}>
+            <Image source={{ uri: item.imgDirect}} style={AppStyle.FoodItems_PortraitStyles.image} />
+            
+            <View style={AppStyle.FoodItems_PortraitStyles.ratingContainer}>
+              <Text style={ AppStyle.FoodItems_PortraitStyles.rating}>
+                {item.ratingAvarage}
+                <MaterialCommunityIcons name="star" size={12} color="yellow" />
+                ({item.ratingCount})
+              </Text>
+            </View>
+            
+            
+            <TouchableOpacity onPress={handleDecrease} style={AppStyle.FoodItems_PortraitStyles.favoriteButton}>
+              <MaterialCommunityIcons name='cards-heart' style={AppStyle.FoodItems_PortraitStyles.favoriteIcon}/>
+            </TouchableOpacity>
+          </View>
+
+          <Text style={AppStyle.FoodItems_PortraitStyles.name}>{item.name}</Text>
+          <Text style={AppStyle.FoodItems_PortraitStyles.price}>{item.price} VND</Text>
+            
           </View>
         );
 };

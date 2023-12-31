@@ -27,6 +27,11 @@ const CartItemStyles = StyleSheet.create({
         right: 10,
         top: 10,
     },
+    description: {
+        position: 'absolute',
+        top: 40,
+        left: 130,
+    },
     price: {
         position: 'absolute',
         bottom: 15,

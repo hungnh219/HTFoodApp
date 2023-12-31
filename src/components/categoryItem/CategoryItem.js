@@ -18,11 +18,12 @@ function CategoryItem({ item, changeSelectedCate, selectedCategory }) {
 const styles = StyleSheet.create({
   item: {
     padding: 10,
-    height: 120,
+    height: 110,
     backgroundColor: 'white',
     borderRadius: 45,
     alignItems: 'center',
     marginHorizontal: 10,
+    marginTop: 10,
   },
   selectedItem: {
     backgroundColor: '#FE724C',

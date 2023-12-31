@@ -7,16 +7,6 @@ import AppStyle from '../../styles/GlobalStyle';
 
 
 function CartItem({ item }) {
-    const foodData = {
-        image: require('../../../assets/img/food.png'),
-        price: 9.50,
-        name: 'Ground Beef Tacos',
-        description: 'Brown the beef better. Lean ground beef – I like to use 85% lean angus. Garlic – use fresh  chopped. Spices – chili powder, cumin, onion powder.',
-        rating: {
-            count: 50,
-            average: 4.5,
-        },
-    };
 
     const [quantity, setQuantity] = useState(1);
 
@@ -39,14 +29,15 @@ function CartItem({ item }) {
 
     return(
     <View style={AppStyle.CartItemStyles.container}>
-        <Image source={foodData.image} style={AppStyle.CartItemStyles.image} />
-        <Text style={AppStyle.CartItemStyles.name}>{foodData.name}</Text>
+        <Image source={{ uri: item.imgDirect}} style={AppStyle.CartItemStyles.image} />
+        <Text style={AppStyle.CartItemStyles.name}>{item.name}</Text>
         <TouchableOpacity style={AppStyle.CartItemStyles.delete}>
             {/* xử lí xóa sp ở đây */}
             <Icon name="close" size={20} color="red" />
         </TouchableOpacity>
+        <Text style={AppStyle.CartItemStyles.description}>{item.description}</Text>
     
-    <Text style={AppStyle.CartItemStyles.price}>{foodData.price} $</Text>
+    <Text style={AppStyle.CartItemStyles.price}>{item.price} VND</Text>
     <View style={AppStyle.CartItemStyles.quantityContainer}>
           <TouchableOpacity onPress={handleDecrease} style={AppStyle.CartItemStyles.decreaseQuantityButton}>
             <Text style={AppStyle.CartItemStyles.decreaseQuantityText}>-</Text>

@@ -1,16 +1,13 @@
 import { StyleSheet } from 'react-native'
 
 const CategoriesStyles = StyleSheet.create({
-    container: {
-        flex: 1,
+    category: {
+        height: 150,
+        backgroundColor: 'rgba(249, 168, 77, 0.3)',
+        paddingHorizontal: 15,
     },
     
-    foodList: {
-        flexDirection: 'row',
-    },
-    foodItem: {
-        flex: 0.5,
-    },
+    
 });
 
 export default CategoriesStyles;
