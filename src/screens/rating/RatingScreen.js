@@ -4,6 +4,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import {useFocusEffect} from '@react-navigation/native';
 import StarRating from 'react-native-star-rating-widget';
 import BackButton from '../../components/backButton/BackButton';
+import CustomTextInput from '../../components/customTextInput/CustomTextInput';
 
 import AppStyle from '../../styles/GlobalStyle'
 
@@ -79,14 +80,18 @@ const [rating, setRating] = useState(0);
         </TouchableOpacity>
       </View>
 
+      <View style={{alignItems: 'center', }}>
       <StarRating
         rating={rating}
         onChange={setRating}
       />
+      </View>
+      
+      <CustomTextInput style={{marginTop: 10, }} title={'Review'} content={'Write review'}/>
       <TouchableOpacity style={AppStyle.ProfileStyles.logOutButton}>
         <Text style={AppStyle.ProfileStyles.logOutButtonText}>Submit</Text>
       </TouchableOpacity>
-
+      
       
     </View>
   );
