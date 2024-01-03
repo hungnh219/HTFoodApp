@@ -26,32 +26,33 @@ function UpComingScreen ({ navigation }) {
   
   return (
     <View style={AppStyle.UpcomingStyles.container}>
-      <TouchableOpacity style={AppStyle.LoginStyles.backBtn} onPress={() => navigation.goBack()}>
-        <BackButton />
-      </TouchableOpacity>
-      
-      {/* <Text>My orders</Text> */}
-      <View style={{alignItems: 'center', margin: 20}}>
+      <View style={AppStyle.CheckoutStyles.header}>
+        <TouchableOpacity onPress={() => navigation.goBack()}>
+          <BackButton />
+        </TouchableOpacity>
+        <View style={{alignItems: 'center', margin: 20, marginLeft:30}}>
         <CustomSwitch
           selectionMode={1}
           roundCorner={true}
-          option1={'Upcoming'}
-          option2={'History'}
+          option1={'Chờ giao hàng'}
+          option2={'Lịch sử đơn đặt'}
           onSelectSwitch={(index) => {
             if (index === 1) {
               navigation.navigate("Upcoming");
             } else if (index === 2) {
               selectionMode = 2;
-              navigation.navigate("History");
-              
+              navigation.navigate("History");  
             }
           }}
           selectionColor={'#FE724C'}
         />
       </View>
+      </View>
+
+      
 
       <FlatList
-      data={dataList}
+      data={dataList.slice(0, 3)}
       keyExtractor={item => item.id.toString()}
       renderItem = {({ item }) => (
         <UpcomingItem

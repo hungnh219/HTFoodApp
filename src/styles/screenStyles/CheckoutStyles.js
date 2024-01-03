@@ -1,8 +1,9 @@
 import { StyleSheet } from 'react-native'
 
-const CartStyles = StyleSheet.create({
+const CheckoutStyles = StyleSheet.create({
     container: {
-        alignItems: 'center',
+        flex: 1,
+        backgroundColor: '#fff',
     },
     header: { 
         flexDirection: 'row',
@@ -15,24 +16,16 @@ const CartStyles = StyleSheet.create({
         fontWeight: 'bold',
         marginLeft: 90,
     },
-    priceContainer: {
-        marginHorizontal: 10,
-        justifyContent: 'space-between',
-        padding: 10,
-        backgroundColor: '#fff',
-    },
-    priceLine: {
+    method: {
+        flex: 1,
         flexDirection: 'row',
         justifyContent: 'space-between',
-        width: '100%',
-        paddingVertical: 3,
-    },
-    priceText: {
-        fontSize: 18,
-        // fontWeight : 'bold',
-    },
-    checkoutButton: {
-        marginTop: 40,
+        marginHorizontal: 20,
+        marginVertical: 10,
+    }, 
+    
+    saveButton: {
+        marginBottom: 60,
         marginHorizontal: 60,
         height: 60,
         backgroundColor: '#FE724C',
@@ -40,7 +33,7 @@ const CartStyles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
-    checkoutButtonText: {
+    saveButtonText: {
         color: '#fff',
         fontSize: 16,
         textTransform: 'uppercase',
@@ -48,4 +41,4 @@ const CartStyles = StyleSheet.create({
     },
 });
 
-export default CartStyles;
+export default CheckoutStyles;

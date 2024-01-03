@@ -1,10 +1,10 @@
 import { StyleSheet } from 'react-native'
 
-const FoodItems_PortraitStyles = StyleSheet.create({
+const FoodItems_LandscapeStyles = StyleSheet.create({
     container: {
-      width: '41%',
+      width: '90%',
       padding: 10,
-      marginLeft: 24,
+      marginLeft: 20,
       marginVertical: 10,
       backgroundColor: 'rgba(249, 168, 77, 0.3)',
       borderRadius: 16,
@@ -13,7 +13,7 @@ const FoodItems_PortraitStyles = StyleSheet.create({
         position: 'relative',
     },
     image: {
-        height: 100,
+        height: 180,
         borderRadius: 16,
     },
     ratingContainer: {
@@ -64,4 +64,4 @@ const FoodItems_PortraitStyles = StyleSheet.create({
       alignItems: 'center',
     },
   });
-export default FoodItems_PortraitStyles;
+export default FoodItems_LandscapeStyles;

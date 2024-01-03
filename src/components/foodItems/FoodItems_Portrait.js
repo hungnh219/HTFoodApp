@@ -38,6 +38,10 @@ function FoodItems_Portrait({item}) {
 
           <Text style={AppStyle.FoodItems_PortraitStyles.name}>{item.name}</Text>
           <Text style={AppStyle.FoodItems_PortraitStyles.price}>{item.price} VND</Text>
+
+          <TouchableOpacity  style={AppStyle.FoodItems_PortraitStyles.addToCart}>
+              <MaterialCommunityIcons name='cart-plus' size={20} color="white" />
+            </TouchableOpacity>
             
           </View>
         );

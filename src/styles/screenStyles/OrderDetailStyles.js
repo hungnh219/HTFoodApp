@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native'
 
-const CartStyles = StyleSheet.create({
+const OrderDetailStyles = StyleSheet.create({
     container: {
         alignItems: 'center',
     },
@@ -13,7 +13,7 @@ const CartStyles = StyleSheet.create({
     headerTitle: {
         fontSize: 20,
         fontWeight: 'bold',
-        marginLeft: 90,
+        marginLeft: 60,
     },
     priceContainer: {
         marginHorizontal: 10,
@@ -31,21 +31,7 @@ const CartStyles = StyleSheet.create({
         fontSize: 18,
         // fontWeight : 'bold',
     },
-    checkoutButton: {
-        marginTop: 40,
-        marginHorizontal: 60,
-        height: 60,
-        backgroundColor: '#FE724C',
-        borderRadius: 45,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    checkoutButtonText: {
-        color: '#fff',
-        fontSize: 16,
-        textTransform: 'uppercase',
-        fontWeight: '800',
-    },
+    
 });
 
-export default CartStyles;
+export default OrderDetailStyles;

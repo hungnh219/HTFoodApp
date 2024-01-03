@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, Text, Button, FlatList, TouchableOpacity } from 'react-native';
-import HistoryItem from '../../components/historyItem/HistoryItem'
+
 import CustomSwitch from '../../components/customSwitch/CustomSwitch';
-import UpcomingItem from '../../components/upcoming/upcomingItem';
+import HistoryItem from '../../components/historyItem/HistoryItem';
 import BackButton from '../../components/backButton/BackButton';
 
 import AppStyle from '../../styles/GlobalStyle'
@@ -22,33 +22,37 @@ function HistoryScreen ({ navigation }) {
   ];
   return (
     <View style={AppStyle.LoginStyles.container}>
-      <TouchableOpacity style={AppStyle.LoginStyles.backBtn} onPress={() => navigation.goBack()}>
-        <BackButton />
-      </TouchableOpacity>
-      <View style={{alignItems: 'center', margin: 20}}>
+      
+      <View style={AppStyle.CheckoutStyles.header}>
+        <TouchableOpacity onPress={() => navigation.goBack()}>
+          <BackButton />
+        </TouchableOpacity>
+        <View style={{alignItems: 'center', margin: 20, marginLeft:30}}>
         <CustomSwitch
+          navigation={navigation}
           selectionMode={2}
           roundCorner={true}
-          option1={'Upcoming'}
-          option2={'History'}
+          option1={'Chờ giao hàng'}
+          option2={'Lịch sử đơn đặt'}
           onSelectSwitch={(index) => {
             if (index === 1) {
-              selectionMode = 1;
               navigation.navigate("Upcoming");
-              
             } else if (index === 2) {
-              navigation.navigate("History");
+              selectionMode = 2;
+              navigation.navigate("History");  
             }
           }}
           selectionColor={'#FE724C'}
         />
       </View>
+      </View>
       <FlatList
-      data={dataList}
+      data={dataList.slice(0, 3)}
       keyExtractor={item => item.id.toString()}
       renderItem = {({ item }) => (
-        <UpcomingItem
+        <HistoryItem
           item={item} 
+          navigation={navigation}
          />
       )}
       />

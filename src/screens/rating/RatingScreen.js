@@ -8,7 +8,7 @@ import CustomTextInput from '../../components/customTextInput/CustomTextInput';
 
 import AppStyle from '../../styles/GlobalStyle'
 
-function FoodDetailScreen({ navigation }) {
+function RatingScreen({ navigation }) {
   const foodData = {
     image: require('../../../assets/img/food.png'),
     price: 9.50,
@@ -52,31 +52,34 @@ function FoodDetailScreen({ navigation }) {
 const [rating, setRating] = useState(0);
   return (
     
-    <View style={AppStyle.FoodDetailStyles.container}>
-      <TouchableOpacity style={AppStyle.LoginStyles.backBtn} onPress={() => navigation.goBack()}>
-        <BackButton />
-      </TouchableOpacity>
+    <View style={AppStyle.RatingStyles.container}>
+      <View style={AppStyle.CheckoutStyles.header}>
+        <TouchableOpacity onPress={() => navigation.goBack()}>
+          <BackButton />
+        </TouchableOpacity>
+        <Text style={AppStyle.CheckoutStyles.headerTitle}>Đánh giá</Text>
+      </View>
 
-      <View style={AppStyle.FoodDetailStyles.foodImageContainer}>
+      <View style={AppStyle.RatingStyles.foodImageContainer}>
       
         <Image
-          style={AppStyle.FoodDetailStyles.foodImage}
+          style={AppStyle.RatingStyles.foodImage}
           source={foodData.image}
         />
 
-        <TouchableOpacity onPress={handleDecrease} style={AppStyle.FoodDetailStyles.favoriteButton}>
-          <MaterialCommunityIcons name='cards-heart' style={AppStyle.FoodDetailStyles.favoriteIcon}/>
+        <TouchableOpacity onPress={handleDecrease} style={AppStyle.RatingStyles.favoriteButton}>
+          <MaterialCommunityIcons name='cards-heart' style={AppStyle.RatingStyles.favoriteIcon}/>
         </TouchableOpacity>
       </View>
 
-      <Text style={AppStyle.FoodDetailStyles.foodName}>{foodData.name}</Text>
+      <Text style={AppStyle.RatingStyles.foodName}>{foodData.name}</Text>
 
-      <View style={AppStyle.FoodDetailStyles.ratingContainer}>
-        <MaterialCommunityIcons name='star' style={AppStyle.FoodDetailStyles.ratingIcon}/>
-        <Text style={AppStyle.FoodDetailStyles.ratingAverage}>{foodData.rating.average}</Text>
-        <Text style={AppStyle.FoodDetailStyles.ratingCount}>{"("}{foodData.rating.count}{")"}</Text>
+      <View style={AppStyle.RatingStyles.ratingContainer}>
+        <MaterialCommunityIcons name='star' style={AppStyle.RatingStyles.ratingIcon}/>
+        <Text style={AppStyle.RatingStyles.ratingAverage}>{foodData.rating.average}</Text>
+        <Text style={AppStyle.RatingStyles.ratingCount}>{"("}{foodData.rating.count}{")"}</Text>
         <TouchableOpacity onPress={ () => navigation.navigate("Reviews")}>
-          <Text style={AppStyle.FoodDetailStyles.ratingReview}>See Review</Text>
+          <Text style={AppStyle.RatingStyles.ratingReview}>See Review</Text>
         </TouchableOpacity>
       </View>
 
@@ -97,4 +100,4 @@ const [rating, setRating] = useState(0);
   );
 };
 
-export default FoodDetailScreen;
+export default RatingScreen;

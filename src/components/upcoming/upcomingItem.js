@@ -10,35 +10,31 @@ function UpcomingItem({ item, navigation }) {
 
     const [quantity, setQuantity] = useState(1);
 
-  const handleDecrease = () => {
-    if (quantity > 1) {
-      setQuantity(quantity - 1);
-    }
-  };
-
-  const handleIncrease = () => {
-    if (quantity < 9) {
-      setQuantity(quantity + 1);
-    }
-  };
-
-  const formatQuantity = (num) => {
-    return num < 10 ? `0${num}` : num.toString();
-  };
+    const getRandomInt = (min, max) => {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    };
 
 
     return(
     <View style={AppStyle.UpcomingItemStyles.container}>
-        <Image source={{ uri: item.imgDirect}} style={AppStyle.UpcomingItemStyles.image} />
-        <Text style={AppStyle.UpcomingItemStyles.name}>{item.name}</Text>
-        
-    
-        <Text style={AppStyle.UpcomingItemStyles.price}>{item.price} VND</Text>
-        
-      <TouchableOpacity onPress={ () => navigation.navigate("Rating")} style={AppStyle.UpcomingItemStyles.rating}>
-        <Text style={{color:'#fff'}}>Rate</Text>
+      <View style={AppStyle.UpcomingItemStyles.estimate}>
+        <Text style={AppStyle.UpcomingItemStyles.estimateTitle}>Thời gian ước tính</Text>
+        <Text style={AppStyle.UpcomingItemStyles.estimateTime}>{getRandomInt(10, 59)} phút</Text>
+      </View>
+      <View style={AppStyle.UpcomingItemStyles.status}>
+        <Text style={AppStyle.UpcomingItemStyles.statusTitle}>Trạng thái</Text>
+        <Text style={AppStyle.UpcomingItemStyles.statusContent}>Chờ giao hàng</Text>
+      </View>
+      
+      
+      <TouchableOpacity  style={AppStyle.UpcomingItemStyles.cancel}>
+        <Text style={{color:'#000'}}>Hủy đơn</Text>
       </TouchableOpacity>
-    
+      <TouchableOpacity onPress={ () => navigation.navigate("OrderDetail") } style={AppStyle.UpcomingItemStyles.tracking}>
+        <Text style={{color:'#fff'}}>Chi tiết đơn hàng</Text>
+      </TouchableOpacity>   
     
     </View>
     );

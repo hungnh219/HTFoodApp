@@ -11,6 +11,7 @@ import FavoritesScreen from '../../screens/favorites/FavoritesScreen';
 import HomeStackNavigator from '../HomeStackNavigator/HomeStackNavigator';
 import MyOrdersStackNavigator from '../MyOrdersStackNavigator/MyOrdersStackNavigator';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import CartNavigator from '../CartNavigator/CartNavigator';
 
 const Tab = createBottomTabNavigator();
 
@@ -43,8 +44,8 @@ function MainTabNavigator ({ route }) {
         }}
         />
       <Tab.Screen
-        name="Cart"
-        component={CartScreen}
+        name="CartNavigator"
+        component={CartNavigator}
         options={{
           headerShown: false,
           tabBarLabel: 'Cart',
