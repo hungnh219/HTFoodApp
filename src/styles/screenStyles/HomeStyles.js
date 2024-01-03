@@ -55,7 +55,13 @@ const HomeStyles = StyleSheet.create({
         height: 44,
         backgroundColor: 'rgba(249, 168, 77, 0.1)',
         borderRadius: 12,
-    }
+    },
+    foodList: {
+        flexDirection: 'row',
+    },
+    foodItem: {
+        flex: 0.5,
+    },
 });
 
 export default HomeStyles;

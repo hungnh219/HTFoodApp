@@ -5,17 +5,19 @@ const WelcomeStyles = StyleSheet.create({
         flex: 1,   
     },
     image: {
-        flex: 1,        
+        flex: 1,    
+        position: 'relative',    
     },
     overlay: {
         ...StyleSheet.absoluteFillObject,
         backgroundColor: 'rgba(0,0,0,0.5)'
     },
     skipBtn: {
+        position: 'absolute',
         width: 55,
         height: 32,
-        marginTop: 50,
-        marginLeft: 320,
+        top: 40,
+        right: 20,
         backgroundColor: '#fff',
         borderRadius: 27,
         justifyContent: 'center',

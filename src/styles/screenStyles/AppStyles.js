@@ -5,6 +5,7 @@ const AppStyles = StyleSheet.create({
         flex: 1,
         marginTop: 44,
     },
+    
 });
 
 export default AppStyles;

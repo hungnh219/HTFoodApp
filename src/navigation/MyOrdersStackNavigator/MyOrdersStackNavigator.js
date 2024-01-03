@@ -5,6 +5,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import UpComingScreen from '../../screens/upComing/UpComingScreen';
 import HistoryScreen from '../../screens/history/HistoryScreen';
 import RatingScreen from '../../screens/rating/RatingScreen';
+import OrderDetailScreen from '../../screens/orderDetail/OrderDetailScreen';
+import OrderRatingScreen from '../../screens/orderDetail/OrderRatingScreen';
 
 const Stack = createStackNavigator();
 
@@ -29,7 +31,21 @@ function MyOrdersStackNavigator () {
         name="Rating"
         component={RatingScreen}
         options={{
-            headerShown: true,
+            headerShown: false,
+        }}
+        />
+      <Stack.Screen
+        name="OrderDetail"
+        component={OrderDetailScreen}
+        options={{
+            headerShown: false,
+        }}
+        />
+        <Stack.Screen
+        name="OrderRating"
+        component={OrderRatingScreen}
+        options={{
+            headerShown: false,
         }}
         />
     </Stack.Navigator>

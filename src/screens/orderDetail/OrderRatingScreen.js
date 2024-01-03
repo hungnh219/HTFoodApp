@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { View, Text, Image, FlatList, Button, TouchableOpacity, ScrollView } from 'react-native';
-import CartItem from '../../components/cartItem/CartItem';
+import OrderRatingItem from '../../components/orderDetail/OrderRatingItem';
 import BackButton from '../../components/backButton/BackButton';
+
 
 import AppStyle from '../../styles/GlobalStyle'
 
-function CartScreen({ navigation }) {
+
+function OrderRatingScreen({ navigation }) {
   const dataList = [
     { "description": "Day la banh cuon", "id": 1, "imgDirect": "https://file.hstatic.net/200000836951/file/1_428af928f054439eba8fe6fdd480410b.png", "name": "Banh cuon", "price": 20000, "ratingAvarage": 3.8, "ratingCount": 30, "type": "FastFood" },
     { "description": "Day la hamburger hehe", "id": 2, "imgDirect": "https://file.hstatic.net/200000836951/file/3_aca8c22730794923b874492c9041b1f7.png", "name": "Hamburger", "price": 30000, "ratingAvarage": 4.5, "ratingCount": 32, "type": "FastFood" },
@@ -18,54 +20,34 @@ function CartScreen({ navigation }) {
     { "description": "Day la tra dau", "id": 9, "imgDirect": "https://file.hstatic.net/200000836951/file/7_466adbd2f9b446b4bc6ca04def5bec04.png", "name": "Tra dau", "price": 20000, "ratingAvarage": 4.2, "ratingCount": 60, "type": "Drink" },
     { "description": "Day la tra vai", "id": 10, "imgDirect": "https://file.hstatic.net/200000836951/file/8_84c19158d20c42f38158c26c8da4672e.png", "name": "Tra vai", "price": 20000, "ratingAvarage": 4.1, "ratingCount": 67, "type": "Drink" }
   ];
-  const [cartItems, setCartItems] = useState([]);
+  const [OrderRatingItems, setOrderRatingItems] = useState([]);
   const subtotal = dataList.reduce((total, item) => total + item.price, 0);
   const deliveryFee = 5; // or calculate based on subtotal
   const totalFee = subtotal + deliveryFee;
-
   return (
     <View>
       {/* xử lí logic giỏ hàng rỗng -> có thông báo riêng */}
-      <View style={AppStyle.CartStyles.header}>
+      <View style={AppStyle.OrderDetailStyles.header}>
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <BackButton />
         </TouchableOpacity>
-        <Text style={AppStyle.CartStyles.headerTitle}>Giỏ hàng</Text>
+        <Text style={AppStyle.OrderDetailStyles.headerTitle}>Đánh giá đơn hàng</Text>
+
       </View>
-
-
       <FlatList
         // style={{marginBottom: 200}}
         data={dataList.slice(0, 3)}
         keyExtractor={item => item.id.toString()}
         renderItem={({ item }) => (
-          <CartItem
+          <OrderRatingItem
             item={item}
+            navigation={navigation}
           />
         )}
       />
-      <View style={AppStyle.CartStyles.priceContainer}>
-        <View style={AppStyle.CartStyles.priceLine}>
-          <Text style={AppStyle.CartStyles.priceText}>Tạm tính</Text>
-          <Text style={AppStyle.CartStyles.priceText}>{subtotal} VND</Text>
-        </View>
-        <View style={AppStyle.CartStyles.priceLine}>
-          <Text style={AppStyle.CartStyles.priceText}>Phí vận chuyển</Text>
-          <Text style={AppStyle.CartStyles.priceText}>{deliveryFee} VND</Text>
-        </View>
-        <View style={AppStyle.CartStyles.priceLine}>
-          <Text style={[AppStyle.CartStyles.priceText, {fontWeight:'bold'}]}>Tổng tiền</Text>
-          <Text style={[AppStyle.CartStyles.priceText, {fontWeight:'bold'}]}>{totalFee} VND</Text>
-        </View>
-      </View>
-
-      <TouchableOpacity style={AppStyle.CartStyles.checkoutButton} onPress={() => navigation.navigate('Checkout')}>
-        <Text style={AppStyle.CartStyles.checkoutButtonText}>Thanh toán</Text>
-      </TouchableOpacity>
-
-
+      
     </View>
-  );
-};
+  )
+}
 
-export default CartScreen;
+export default OrderRatingScreen

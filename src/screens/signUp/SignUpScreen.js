@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, Image, Alert, ImageBackground, TouchableOpacity, Pressable } from 'react-native';
 import AppStyle from '../../styles/GlobalStyle'
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import BackButton from '../../components/backButton/BackButton';
 
 function SignUpScreen({ navigation }) {
   // const [username, setUsername] = useState('');
@@ -33,7 +34,9 @@ function SignUpScreen({ navigation }) {
   return (
     <View style={AppStyle.SignUpStyles.container}>
       <ImageBackground source={require('../../../assets/img/loginbg.png')} style={AppStyle.SignUpStyles.image} resizeMode="cover">
-      
+      <TouchableOpacity style={AppStyle.LoginStyles.backBtn} onPress={() => navigation.goBack()}>
+        <BackButton />
+      </TouchableOpacity>
       <Text style={AppStyle.SignUpStyles.signUpTitle}>Đăng ký</Text>
       
       <Text style={AppStyle.SignUpStyles.label}>Full name</Text>
