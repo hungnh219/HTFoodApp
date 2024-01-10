@@ -10,6 +10,7 @@ import CustomTextBoxStyles from './componentStyles/CustomTextBoxStyles'
 import CustomTextInputStyles from './componentStyles/CustomTextInputStyles'
 import SignUpStyles from './screenStyles/SignUpStyles'
 import WelcomeStyles from './screenStyles/WelcomeStyles'
+<<<<<<< HEAD
 import FoodItems_PortraitStyles from './componentStyles/FoodItems_PortraitStyles'
 import CategoriesStyles from './screenStyles/CategoriesStyles'
 import CategoryItemStyles from './componentStyles/CategoryItemStyles'
@@ -23,6 +24,8 @@ import RatingStyles from './screenStyles/RatingStyles'
 import OrderDetailStyles from './screenStyles/OrderDetailStyles'
 import OrderDetailItemStyles from './componentStyles/OrderDetailItemStyles'
 import OrderRatingItemStyles from './componentStyles/OrderRatingItemStyles'
+=======
+>>>>>>> 9719e30007723ec66ba54745f270121421d25961
 
 const AppStyle = {
     HomeStyles,
@@ -37,6 +40,7 @@ const AppStyle = {
     CustomTextInputStyles,
     ReviewsStyles,
     WelcomeStyles,
+<<<<<<< HEAD
     FoodItems_PortraitStyles,
     FoodItems_LandscapeStyles,
     CategoriesStyles,
@@ -50,6 +54,8 @@ const AppStyle = {
     OrderDetailStyles,
     OrderDetailItemStyles,
     OrderRatingItemStyles,
+=======
+>>>>>>> 9719e30007723ec66ba54745f270121421d25961
 }
 
 export default AppStyle;

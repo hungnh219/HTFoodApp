@@ -36,11 +36,19 @@ function SignUpScreen({ navigation }) {
       
       <Text style={AppStyle.SignUpStyles.signUpTitle}>Đăng ký</Text>
       
+<<<<<<< HEAD
       <Text style={AppStyle.SignUpStyles.label}>Họ và Tên</Text>
       <View style={AppStyle.SignUpStyles.inputContainer}>
         <TextInput
           style={AppStyle.SignUpStyles.inputField}
           placeholder={'Nhập tên ...'}
+=======
+      <Text style={AppStyle.SignUpStyles.label}>Full name</Text>
+      <View style={AppStyle.SignUpStyles.inputContainer}>
+        <TextInput
+          style={AppStyle.SignUpStyles.inputField}
+          placeholder={'Full name'}
+>>>>>>> 9719e30007723ec66ba54745f270121421d25961
         />
       </View>
 
@@ -48,16 +56,28 @@ function SignUpScreen({ navigation }) {
       <View style={AppStyle.SignUpStyles.inputContainer}>
         <TextInput
           style={AppStyle.SignUpStyles.inputField}
+<<<<<<< HEAD
           placeholder={'Nhập Email ...'}
         />
       </View>
 
       <Text style={AppStyle.SignUpStyles.label}>Mật khẩu</Text>
+=======
+          placeholder={'Email'}
+        />
+      </View>
+
+      <Text style={AppStyle.SignUpStyles.label}>Password</Text>
+>>>>>>> 9719e30007723ec66ba54745f270121421d25961
       <View style={AppStyle.SignUpStyles.inputContainer}>
         <TextInput
           style={AppStyle.SignUpStyles.inputField}
           name="password"
+<<<<<<< HEAD
           placeholder="Nhập mật khẩu ..."
+=======
+          placeholder="Password"
+>>>>>>> 9719e30007723ec66ba54745f270121421d25961
           autoCapitalize="none"
           autoCorrect={false}
           textContentType="newPassword"
@@ -74,6 +94,7 @@ function SignUpScreen({ navigation }) {
 
       <View style={AppStyle.SignUpStyles.handleContainer}>
         <TouchableOpacity style={AppStyle.SignUpStyles.signUpBtn} >
+<<<<<<< HEAD
           <Text style={AppStyle.SignUpStyles.signUpBtnText}>Đăng Ký</Text>
         </TouchableOpacity>
 
@@ -83,6 +104,17 @@ function SignUpScreen({ navigation }) {
 
 
         <Text style={AppStyle.SignUpStyles.otherSignUp}>Đăng nhập bằng</Text>
+=======
+          <Text style={AppStyle.SignUpStyles.signUpBtnText}>SIGN UP</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={AppStyle.SignUpStyles.signUp} onPress={ () => navigation.navigate('Login')}>
+          <Text style={AppStyle.SignUpStyles.signUpText}>Already have an account? <Text style={AppStyle.SignUpStyles.orangeText}>Login</Text></Text>
+        </TouchableOpacity>
+
+
+        <Text style={AppStyle.SignUpStyles.otherSignUp}>Sign up with</Text>
+>>>>>>> 9719e30007723ec66ba54745f270121421d25961
         <View style={AppStyle.SignUpStyles.methodsContainer}>
           <View style={AppStyle.SignUpStyles.methods}>
             <Image style={AppStyle.SignUpStyles.otherLogo} source={require('../../../assets/img/fb-icon.png')} />

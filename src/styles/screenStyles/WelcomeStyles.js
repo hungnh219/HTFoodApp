@@ -5,19 +5,30 @@ const WelcomeStyles = StyleSheet.create({
         flex: 1,   
     },
     image: {
+<<<<<<< HEAD
         flex: 1,    
         position: 'relative',    
+=======
+        flex: 1,        
+>>>>>>> 9719e30007723ec66ba54745f270121421d25961
     },
     overlay: {
         ...StyleSheet.absoluteFillObject,
         backgroundColor: 'rgba(0,0,0,0.5)'
     },
     skipBtn: {
+<<<<<<< HEAD
         position: 'absolute',
         width: 55,
         height: 32,
         top: 40,
         right: 20,
+=======
+        width: 55,
+        height: 32,
+        marginTop: 50,
+        marginLeft: 320,
+>>>>>>> 9719e30007723ec66ba54745f270121421d25961
         backgroundColor: '#fff',
         borderRadius: 27,
         justifyContent: 'center',
