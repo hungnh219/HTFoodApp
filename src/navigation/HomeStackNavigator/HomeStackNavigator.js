@@ -26,7 +26,7 @@ function HomeStackNavigator({ navigation }) {
         name="FoodDetail"
         component={FoodDetailScreen}
         options={{
-            headerShown: true,
+            headerShown: false,
         }}
         />
       <Stack.Screen
@@ -40,7 +40,7 @@ function HomeStackNavigator({ navigation }) {
         name="Profile"
         component={ProfileScreen}
         options={{
-          headerShown: true,
+          headerShown: false,
           tabBarVisible: false,
         }}
         />
@@ -48,7 +48,7 @@ function HomeStackNavigator({ navigation }) {
         name="EditProfile"
         component={EditProfileScreen}
         options={{
-          headerShown: true,
+          headerShown: false,
           tabBarVisible: false,
         }}
         />

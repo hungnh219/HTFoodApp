@@ -13,6 +13,7 @@ const FoodDetailStyles = StyleSheet.create({
     },
     foodImage: {
         width: '100%',
+        height: 300,
         borderRadius: 16,
     },
     foodName: {

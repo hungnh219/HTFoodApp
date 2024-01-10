@@ -1,8 +1,12 @@
 import { StyleSheet } from 'react-native'
 
 const HomeStyles = StyleSheet.create({
+    headerContainer: {
+        marginBottom: 20,
+    },
     container: {
-        backgroundColor: 'red',
+        // backgroundColor: 'red',
+        marginBottom: 160,
     },
     header: {
         marginTop: 20,
@@ -28,14 +32,14 @@ const HomeStyles = StyleSheet.create({
         justifyContent: 'space-between',
         alignItems: 'center',
         marginHorizontal: 20,
+        marginBottom: 20,
     },
     searchBox: {
-        flex: 0.95,
+        flex: 1,
         backgroundColor: 'transparent',
         borderColor: 'transparent',
         margin: 0,
         padding: 0,
-        paddingRight: 20,
     },
     searchInputContainer: {
         backgroundColor: 'rgba(249, 168, 77, 0.3)',
@@ -55,7 +59,13 @@ const HomeStyles = StyleSheet.create({
         height: 44,
         backgroundColor: 'rgba(249, 168, 77, 0.1)',
         borderRadius: 12,
-    }
+    },
+    sectionTitle: {
+        fontSize: 24,
+        fontWeight: 'bold',
+        marginVertical: 10,
+        marginHorizontal: 20,
+    },
 });
 
 export default HomeStyles;
